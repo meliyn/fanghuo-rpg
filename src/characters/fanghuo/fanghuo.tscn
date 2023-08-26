@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cif2bl4to2jp1"]
+
+[ext_resource type="Texture2D" uid="uid://jcisie6ihw0h" path="res://assets/characters/fanghuo/fanghuo.png" id="1_ewgdf"]
+[ext_resource type="Script" path="res://src/characters/character_controller.gd" id="1_t2w1a"]
+[ext_resource type="PackedScene" uid="uid://pwbjau1vphm1" path="res://src/weapons/golden_bar/golden_bar.tscn" id="2_0wkr0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q3xcq"]
+size = Vector2(14, 55)
+
+[node name="Fanghuo" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_t2w1a")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ewgdf")
+
+[node name="GoldenBar" parent="." instance=ExtResource("2_0wkr0")]
+position = Vector2(7, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_q3xcq")

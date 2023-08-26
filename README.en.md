@@ -6,7 +6,7 @@ An RPG about Fanghuo
 
 ## Status
 
-2023/08/26: Not started yet
+2023/08/26: Started
 
 ## About
 

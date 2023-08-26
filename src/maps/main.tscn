@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cda4vg0osic6h"]
+
+[ext_resource type="PackedScene" uid="uid://cif2bl4to2jp1" path="res://src/characters/fanghuo/fanghuo.tscn" id="1_7tmxu"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Fanghuo" parent="." instance=ExtResource("1_7tmxu")]
+position = Vector2(41, 45)
