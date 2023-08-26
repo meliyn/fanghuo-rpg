@@ -14,9 +14,9 @@ This is a RPG about Fanghuo (A Taiwanese YouTuber) written in Godot Engine. An E
 
 ## License
 
-Code is licensed under [ISC License](./LICENSE-CODE)
+Code is licensed under [ISC License](./LICENSE)
 
-Other things are licensed under [Creative Commons Attribution 4.0 International License](./LICENSE)
+Other things are licensed under [Creative Commons Attribution 4.0 International License](./LICENSE-OTHER)
 
 ## Disclaimer
 
