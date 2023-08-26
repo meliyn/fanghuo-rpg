@@ -6,3 +6,5 @@
 
 [node name="Fanghuo" parent="." instance=ExtResource("1_7tmxu")]
 position = Vector2(41, 45)
+
+[node name="Camera" type="Camera2D" parent="."]

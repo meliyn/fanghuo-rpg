@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://8gwixtjeu6ou"]
+
+[ext_resource type="Script" path="res://src/bullets/golden_bullet/golden_bullet.gd" id="1_c71ie"]
+[ext_resource type="Texture2D" uid="uid://gr2t4082fkp5" path="res://assets/items/golden_bullet/golden_bullet.png" id="1_nu0dj"]
+
+[node name="GoldenBullet" type="Node2D"]
+script = ExtResource("1_c71ie")
+
+[node name="GoldenBullet" type="Sprite2D" parent="."]
+texture = ExtResource("1_nu0dj")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 5
+lifetime = 0.1
+gravity = Vector2(0, 0)
+scale_amount_max = 2.5
