@@ -1,10 +1,47 @@
-[gd_scene load_steps=4 format=3 uid="uid://dpd0bskeqm5g7"]
+[gd_scene load_steps=7 format=3 uid="uid://dpd0bskeqm5g7"]
 
 [ext_resource type="Script" path="res://src/weapons/golden_gun/golden_gun.gd" id="1_ondlb"]
 [ext_resource type="Texture2D" uid="uid://dlykf6utyvd2u" path="res://assets/items/golden_bar/golden_bar.png" id="2_66w83"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_684ed"]
 size = Vector2(18, 8)
+
+[sub_resource type="Animation" id="Animation_qgobv"]
+resource_name = "recoil"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GoldenGun:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-10, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6t30w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GoldenGun:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ru1v2"]
+_data = {
+"RESET": SubResource("Animation_6t30w"),
+"recoil": SubResource("Animation_qgobv")
+}
 
 [node name="GoldenGun" type="Node2D"]
 script = ExtResource("1_ondlb")
@@ -18,3 +55,8 @@ offset = Vector2(9, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GoldenGun/Area2D"]
 position = Vector2(9, 0)
 shape = SubResource("RectangleShape2D_684ed")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ru1v2")
+}
